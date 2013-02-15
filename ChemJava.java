@@ -26,7 +26,40 @@ public class ChemJava {
 		}
 		
 		if (chapter == 5) {
-			System.out.println("PV=nRT");
+			final double R = 0.08205746; // Gas constant "R"
+			System.out.println("Which equation would you like to use?");
+			System.out.println("PV=nRT = 1");
+			
+			int equationNumber = input.nextInt();
+			
+			if (equationNumber == 1) {
+				System.out.println("Which variable is your unknown...P, V, n, or T? ");
+				String unknown = input.next();
+				
+				if (unknown.equals("P")) {
+					// TODO: make sure this equation is correct
+					System.out.print("V (liters) = ");
+					double V = input.nextDouble();
+					System.out.print("n (moles) = ");
+					double n = input.nextDouble();
+					System.out.print("T (Kelvins) = ");
+					double T = input.nextDouble();
+					double P = (n * R * T) / V;
+					System.out.println(P);
+				}
+				
+				if (unknown.equals("V")) {
+					System.out.println("unknown is V");
+				}
+				
+				if (unknown.equals("n")) {
+					System.out.println("unknown is n");
+				}
+				
+				if (unknown.equals("T")) {
+					System.out.println("unknown is T");
+				}
+			}
 		}
 		
 		if (chapter == 6) {

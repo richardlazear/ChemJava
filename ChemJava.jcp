@@ -31,5 +31,12 @@
 			</fileitem>
 		</include>
 	</files>
-	<tasks/>
+	<tasks>
+		<todotaskitem>
+			<description>TODO</description>
+			<filepath>ChemJava.java</filepath>
+			<line>42</line>
+			<timestamp>1360898135</timestamp>
+		</todotaskitem>
+	</tasks>
 </project>
