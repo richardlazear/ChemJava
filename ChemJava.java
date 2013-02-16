@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class ChemJava {
 	public static void main(String[] args) {
-		System.out.println("Chapter 2: Chemical Formulas  = 1");
-		System.out.println("Chapter 5: Thermochemistry    = 2");
-		System.out.println("Chapter 6-7: Light            = 3");
-		System.out.println("Chapter 8-9: Chemical Bonding = 4");
-		System.out.println("Chapter 11: Gases             = 5");
-		System.out.println("Chapter 14: Solutions         = 6");
+		System.out.println("Chapter 2:   Chemical Formulas  = 1");
+		System.out.println("Chapter 5:   Thermochemistry    = 2");
+		System.out.println("Chapter 6-7: Light              = 3");
+		System.out.println("Chapter 8-9: Chemical Bonding   = 4");
+		System.out.println("Chapter 11:  Gases              = 5");
+		System.out.println("Chapter 14:  Solutions          = 6");
+		System.out.println("Conversions                     = 7");
 		System.out.println("Please enter the corresponding number of the chapter you would like to enter: ");
 		
 		Scanner input = new Scanner(System.in);
@@ -62,17 +63,38 @@ public class ChemJava {
 					System.out.println(V + " liters");
 				}
 				
-				if (unknown.equals("n")) {
-					System.out.println("unknown is n");
+				if (unknown.equals("n") || unknown.equals("N")) {
+					// Ask for values and store as variables
+					System.out.print("P (atm) = ");
+					double P = input.nextDouble();
+					System.out.print("V (liters) = ");
+					double V = input.nextDouble();
+					System.out.print("T (Kelvins) = ");
+					double T = input.nextDouble();
+					// Perform the equation and print
+					double n = (P * V)/(R * T);
+					System.out.println(n + " moles");					
 				}
 				
-				if (unknown.equals("T")) {
-					System.out.println("unknown is T");
+				if (unknown.equals("T") || unknown.equals("t")) {
+					// Ask for values and store as variables
+					System.out.print("P (atm) = ");
+					double P = input.nextDouble();
+					System.out.print("V (liters) = ");
+					double V = input.nextDouble();
+					System.out.print("n (moles) = ");
+					double n = input.nextDouble();
+					// Perform the equation and print
+					double T = (P * V) / (n * R);
+					System.out.println(T + " Kelvins");
 				}
 			}
 		}
 		
 		if (chapter == 6) {
+		}
+		
+		if (chapter == 7) {
 		}
 	}
 }
