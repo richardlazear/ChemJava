@@ -29,14 +29,10 @@
 			<fileitem>
 				<path>ChemJava.java</path>
 			</fileitem>
+			<fileitem>
+				<path>Conversions.java</path>
+			</fileitem>
 		</include>
 	</files>
-	<tasks>
-		<todotaskitem>
-			<description>TODO</description>
-			<filepath>ChemJava.java</filepath>
-			<line>42</line>
-			<timestamp>1360898135</timestamp>
-		</todotaskitem>
-	</tasks>
+	<tasks/>
 </project>
