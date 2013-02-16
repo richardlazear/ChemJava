@@ -36,20 +36,30 @@ public class ChemJava {
 				System.out.println("Which variable is your unknown...P, V, n, or T? ");
 				String unknown = input.next();
 				
-				if (unknown.equals("P")) {
-					// TODO: make sure this equation is correct
+				if (unknown.equals("P") || unknown.equals("p")) {
+					// Ask for values and store as variables
 					System.out.print("V (liters) = ");
 					double V = input.nextDouble();
 					System.out.print("n (moles) = ");
 					double n = input.nextDouble();
 					System.out.print("T (Kelvins) = ");
 					double T = input.nextDouble();
+					// Perform the equation and print
 					double P = (n * R * T) / V;
-					System.out.println(P);
+					System.out.println(P + " atm");
 				}
 				
-				if (unknown.equals("V")) {
-					System.out.println("unknown is V");
+				if (unknown.equals("V") || unknown.equals("v")) {
+					// Ask for values and store as variables
+					System.out.print("P (atm) = ");
+					double P = input.nextDouble();
+					System.out.print("n (moles) = ");
+					double n = input.nextDouble();
+					System.out.print("T (Kelvins) = ");
+					double T = input.nextDouble();
+					// Perform the equation and print
+					double V = (n * R * T) / P;
+					System.out.println(V + " liters");
 				}
 				
 				if (unknown.equals("n")) {
