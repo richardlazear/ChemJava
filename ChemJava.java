@@ -17,16 +17,16 @@ public class ChemJava {
 		if (chapter == 1) {
 		}
 		
-		if (chapter == 2) {
+		else if (chapter == 2) {
 		}
 		
-		if (chapter == 3) {
+		else if (chapter == 3) {
 		}
 		
-		if (chapter == 4) {
+		else if (chapter == 4) {
 		}
 		
-		if (chapter == 5) {
+		else if (chapter == 5) {
 			final double R = 0.08205746; // Gas constant "R"
 			System.out.println("Which equation would you like to use?");
 			System.out.println("PV=nRT = 1");
@@ -76,7 +76,7 @@ public class ChemJava {
 					System.out.println(n + " moles");					
 				}
 				
-				else {
+				else { // The only other unknown the user would choose is T
 					// Ask for values and store as variables
 					System.out.print("P (atm) = ");
 					double P = input.nextDouble();
@@ -91,10 +91,10 @@ public class ChemJava {
 			}
 		}
 		
-		if (chapter == 6) {
+		else if (chapter == 6) {
 		}
 		
-		if (chapter == 7) {
+		else { // The only other number the user would input is 7
 		}
 	}
 }
