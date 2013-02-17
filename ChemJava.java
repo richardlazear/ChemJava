@@ -37,7 +37,7 @@ public class ChemJava {
 				System.out.println("Which variable is your unknown...P, V, n, or T? ");
 				String unknown = input.next();
 				
-				if (unknown.equals("P") || unknown.equals("p")) {
+				if (unknown.equalsIgnoreCase("P")) {
 					// Ask for values and store as variables
 					System.out.print("V (liters) = ");
 					double V = input.nextDouble();
@@ -50,7 +50,7 @@ public class ChemJava {
 					System.out.println(P + " atm");
 				}
 				
-				if (unknown.equals("V") || unknown.equals("v")) {
+				if (unknown.equalsIgnoreCase("V")) {
 					// Ask for values and store as variables
 					System.out.print("P (atm) = ");
 					double P = input.nextDouble();
@@ -63,7 +63,7 @@ public class ChemJava {
 					System.out.println(V + " liters");
 				}
 				
-				if (unknown.equals("n") || unknown.equals("N")) {
+				if (unknown.equalsIgnoreCase("n") {
 					// Ask for values and store as variables
 					System.out.print("P (atm) = ");
 					double P = input.nextDouble();
@@ -76,7 +76,7 @@ public class ChemJava {
 					System.out.println(n + " moles");					
 				}
 				
-				if (unknown.equals("T") || unknown.equals("t")) {
+				if (unknown.equals("T")) {
 					// Ask for values and store as variables
 					System.out.print("P (atm) = ");
 					double P = input.nextDouble();
