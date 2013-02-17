@@ -50,7 +50,7 @@ public class ChemJava {
 					System.out.println(P + " atm");
 				}
 				
-				if (unknown.equalsIgnoreCase("V")) {
+				else if (unknown.equalsIgnoreCase("V")) {
 					// Ask for values and store as variables
 					System.out.print("P (atm) = ");
 					double P = input.nextDouble();
@@ -63,7 +63,7 @@ public class ChemJava {
 					System.out.println(V + " liters");
 				}
 				
-				if (unknown.equalsIgnoreCase("n") {
+				else if (unknown.equalsIgnoreCase("n")) {
 					// Ask for values and store as variables
 					System.out.print("P (atm) = ");
 					double P = input.nextDouble();
@@ -76,7 +76,7 @@ public class ChemJava {
 					System.out.println(n + " moles");					
 				}
 				
-				if (unknown.equals("T")) {
+				else {
 					// Ask for values and store as variables
 					System.out.print("P (atm) = ");
 					double P = input.nextDouble();
