@@ -23,7 +23,7 @@ class MainFrame extends JFrame {
 			super(new GridLayout(1, 1));
 				
 			JTabbedPane tabbedPane = new JTabbedPane();
-			JPanel panel1 = new JPanel();
+			JPanel panel1 = new JPanel(new BorderLayout());
 	        tabbedPane.add("Chaper 2", panel1);
 	        JPanel panel2 = new JPanel(new BorderLayout());
 	        	JPanel whichEquationLabelContainer = new JPanel();
@@ -36,13 +36,13 @@ class MainFrame extends JFrame {
 	        	panel2.add(whichEquationLabelContainer, BorderLayout.PAGE_START);
 	        	panel2.add(panel2eqnButtons, BorderLayout.CENTER);
 	        tabbedPane.add("Chaper 5", panel2);
-	        JPanel panel3 = new JPanel();
+	        JPanel panel3 = new JPanel(new BorderLayout());
 	        tabbedPane.add("Chaper 6-7", panel3);
-	        JPanel panel4 = new JPanel();
+	        JPanel panel4 = new JPanel(new BorderLayout());
 	        tabbedPane.add("Chaper 8-9", panel4);
-	        JPanel panel5 = new JPanel();
+	        JPanel panel5 = new JPanel(new BorderLayout());
 	        tabbedPane.add("Chaper 11", panel5);
-	        JPanel panel6 = new JPanel();
+	        JPanel panel6 = new JPanel(new BorderLayout());
 	        tabbedPane.add("Chaper 14", panel6);
 	        
 	        add(tabbedPane);	
