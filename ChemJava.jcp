@@ -29,9 +29,6 @@
 			<fileitem>
 				<path>ChemJava.java</path>
 			</fileitem>
-			<fileitem>
-				<path>Conversions.java</path>
-			</fileitem>
 		</include>
 	</files>
 	<tasks/>

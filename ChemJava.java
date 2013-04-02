@@ -1,8 +1,65 @@
+// Author: Richie Lazear
+// https://github.com/richardlazear/
+// www.linkedin.com/in/rlazear/
+
+import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
+import javax.swing.JComponent;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.GridLayout;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
+
+class MainFrame extends JFrame {
+	JLabel whichEquation = new JLabel("Which equation would you like to solve?");
+	JLabel whichUnknown = new JLabel("What is the unknown?");
+	
+	
+	class MainPanel extends JPanel {
+		public MainPanel() {
+			super(new GridLayout(1, 1));
+				
+			JTabbedPane tabbedPane = new JTabbedPane();
+			JPanel panel1 = new JPanel();
+	        tabbedPane.add("Chaper 2", panel1);
+	        JPanel panel2 = new JPanel();
+	        tabbedPane.add("Chaper 5", panel2);
+	        JPanel panel3 = new JPanel();
+	        tabbedPane.add("Chaper 6-7", panel3);
+	        JPanel panel4 = new JPanel();
+	        tabbedPane.add("Chaper 8-9", panel4);
+	        JPanel panel5 = new JPanel();
+	        tabbedPane.add("Chaper 11", panel5);
+	        JPanel panel6 = new JPanel();
+	        tabbedPane.add("Chaper 14", panel6);
+	        
+	        add(tabbedPane);	
+		}
+	}
+	
+	public MainFrame() {
+		// http://www.daniweb.com/software-development/java/threads/76144/removing-and-adding-items-to-jpanel
+		
+		super();
+		this.setSize(700, 700);
+		this.setTitle("ChemJava");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+		this.add(new MainPanel());
+	}
+}
 
 public class ChemJava {
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		MainFrame chemjavaFrame = new MainFrame();
+		chemjavaFrame.setVisible(true);
+		
+		
+		/*Scanner input = new Scanner(System.in);
 		int chapter = 0;
 		
 		do {
@@ -127,6 +184,6 @@ public class ChemJava {
 					System.out.println();
 			}
 			
-		} while (chapter != 0);	
+		} while (chapter != 8);*/	
 	}
 }
