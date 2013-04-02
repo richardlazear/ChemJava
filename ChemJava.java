@@ -15,9 +15,8 @@ import java.awt.event.ActionListener;
 import java.util.Scanner;
 
 class MainFrame extends JFrame {
-	JLabel whichEquation = new JLabel("Which equation would you like to solve?");
-	JLabel whichUnknown = new JLabel("What is the unknown?");
-	
+	JLabel whichEquationLabel = new JLabel("Which equation would you like to solve?");
+	JLabel whichUnknownLabel = new JLabel("What is the unknown?");
 	
 	class MainPanel extends JPanel {
 		public MainPanel() {
@@ -26,7 +25,16 @@ class MainFrame extends JFrame {
 			JTabbedPane tabbedPane = new JTabbedPane();
 			JPanel panel1 = new JPanel();
 	        tabbedPane.add("Chaper 2", panel1);
-	        JPanel panel2 = new JPanel();
+	        JPanel panel2 = new JPanel(new BorderLayout());
+	        	JPanel whichEquationLabelContainer = new JPanel();
+	        		whichEquationLabelContainer.add(whichEquationLabel);
+	        	JPanel panel2eqnButtons = new JPanel();
+	        		JButton pvnrtButton = new JButton("PV = nRT");
+	        		JButton otherButton = new JButton("Other Equation");
+	        		panel2eqnButtons.add(pvnrtButton);
+	        		panel2eqnButtons.add(otherButton);
+	        	panel2.add(whichEquationLabelContainer, BorderLayout.PAGE_START);
+	        	panel2.add(panel2eqnButtons, BorderLayout.CENTER);
 	        tabbedPane.add("Chaper 5", panel2);
 	        JPanel panel3 = new JPanel();
 	        tabbedPane.add("Chaper 6-7", panel3);
@@ -49,7 +57,7 @@ class MainFrame extends JFrame {
 		this.setTitle("ChemJava");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
-		this.add(new MainPanel());
+		this.setContentPane(new MainPanel());
 	}
 }
 
